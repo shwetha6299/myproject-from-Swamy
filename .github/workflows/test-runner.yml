@@ -1,12 +1,14 @@
-name: Test Runner
+name: Build
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
-  test:
+  build:
     runs-on: self-hosted
 
     steps:
-      - name: Hello
-        run: echo "Runner is working"
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: mvn clean package
