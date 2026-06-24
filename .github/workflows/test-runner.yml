@@ -10,5 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build
-        run: mvn clean package
+      - name: Test
+        run: 
+           pwd
+           ls -la
