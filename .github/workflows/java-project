@@ -1,0 +1,14 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: mvn clean package
